@@ -20,6 +20,7 @@ const metaData = {
     publications: { title: "Mouhamed Mbaye - Publications", desc: "Publications et rapports de recherche de Mouhamed Mbaye. Index HAL et ORCID." },
     logiciels: { title: "Mouhamed Mbaye - Logiciels", desc: "Logiciels et applications développés par Mouhamed Mbaye : AI Orchestrator, KNOW-SN RAG, IMGT-NER-APP." },
     formation: { title: "Mouhamed Mbaye - Formation", desc: "Parcours de formation de Mouhamed Mbaye : Master TAL Besançon, Master Data Science-NLP Rabat, Licence Linguistique Marrakech." },
+    communications: { title: "Mouhamed Mbaye - Communications", desc: "Communications et présentations lors de colloques de Mouhamed Mbaye." },
   },
   en: {
     accueil: { title: "Mouhamed Mbaye - Home", desc: "Academic webpage of Mouhamed Mbaye, NLP/TAL Engineer." },
@@ -28,6 +29,7 @@ const metaData = {
     publications: { title: "Mouhamed Mbaye - Publications", desc: "Publications and research reports of Mouhamed Mbaye. HAL and ORCID index." },
     logiciels: { title: "Mouhamed Mbaye - Software", desc: "Software and applications developed by Mouhamed Mbaye: AI Orchestrator, KNOW-SN RAG, IMGT-NER-APP." },
     formation: { title: "Mouhamed Mbaye - Education", desc: "Education path of Mouhamed Mbaye: Master NLP Besançon, Master Data Science-NLP Rabat, Bachelor Linguistics Marrakech." },
+    communications: { title: "Mouhamed Mbaye - Communications", desc: "Communications and poster presentations at symposia by Mouhamed Mbaye." },
   }
 }
 
@@ -43,6 +45,7 @@ const i18n = {
     'nav.publications': 'Publications',
     'nav.logiciels': 'Logiciels',
     'nav.formation': 'Formation',
+    'nav.communications': 'Communications',
     'sidebar.status': "Ingénieur TAL @ GalsenAI Lab",
     'sidebar.lang-title': 'Langues',
     'sidebar.contact-title': 'Profils & Contact',
@@ -58,6 +61,7 @@ const i18n = {
     'nav.publications': 'Publications',
     'nav.logiciels': 'Software',
     'nav.formation': 'Education',
+    'nav.communications': 'Communications',
     'sidebar.status': "NLP Engineer @ GalsenAI Lab",
     'sidebar.lang-title': 'Languages',
     'sidebar.contact-title': 'Profiles & Contact',
@@ -104,6 +108,11 @@ const languagesData = {
 const news = {
   fr: [
     {
+      date: 'Sept. 2026',
+      text: "Poster accepté au colloque ColDoc 2026 (Université Paris Nanterre).",
+      details: "Notre proposition de poster a été acceptée pour le colloque ColDoc 2026, qui se tiendra les 9 et 10 novembre 2026 à l'Université Paris Nanterre. Plus d'informations sur le site du colloque : <a href=\"https://coldoc2026.sciencesconf.org/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"footer-link-web\">coldoc2026.sciencesconf.org ↗</a>."
+    },
+    {
       date: 'Août 2026',
       text: "Papier accepté à NL4AI 2026 : « Known but Unreachable: A Diagnostic Evaluation of Wolof Entity Linking against Wikidata ».",
       details: "Mon article de recherche sur l'évaluation diagnostique de la liaison d'entités (Entity Linking) en wolof vers Wikidata a été accepté pour publication dans les actes et présentation orale lors du 9e workshop NL4AI 2026 (co-localisé avec AI*IA 2026 à Pérouse, Italie). Retrouvez l'appel à papiers et les détails sur le site du workshop : <a href=\"http://sag.art.uniroma2.it/NL4AI/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"footer-link-web\">sag.art.uniroma2.it/NL4AI ↗</a>."
@@ -130,8 +139,8 @@ const news = {
     },
     {
       date: 'Juin 2024',
-      text: "Diplômé du Master 2 Data Science-NLP, Université Mohammed V, Rabat.",
-      details: "Formation pluridisciplinaire avancée en apprentissage profond (Deep Learning), architectures de réseaux de neurones (Transformers), Big Data, et techniques modernes de traitement automatique du langage naturel."
+      text: "Diplômé du Master 2 Computational linguistics, Université Mohammed V, Rabat.",
+      details: "Formation avancée en linguistique computationnelle, traitement automatique des langues, modélisation statistique et apprentissage automatique appliqué aux données textuelles."
     },
     {
       date: 'Jan.–Juin 2024',
@@ -140,6 +149,11 @@ const news = {
     },
   ],
   en: [
+    {
+      date: 'Sep. 2026',
+      text: "Poster accepted for ColDoc 2026 symposium (Université Paris Nanterre).",
+      details: "Our poster proposal has been accepted for the ColDoc 2026 symposium, taking place on November 9–10, 2026 at Université Paris Nanterre. Further details: <a href=\"https://coldoc2026.sciencesconf.org/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"footer-link-web\">coldoc2026.sciencesconf.org ↗</a>."
+    },
     {
       date: 'Aug. 2026',
       text: "Paper accepted at NL4AI 2026: \"Known but Unreachable: A Diagnostic Evaluation of Wolof Entity Linking against Wikidata\".",
@@ -167,8 +181,8 @@ const news = {
     },
     {
       date: 'Jun. 2024',
-      text: "Graduated - Master 2 Data Science-NLP, Mohammed V University, Rabat.",
-      details: "Advanced training in deep learning, transformer-based neural architectures, Big Data systems, and state-of-the-art NLP techniques for mass-scale textual data."
+      text: "Graduated - Master 2 Computational linguistics, Mohammed V University, Rabat.",
+      details: "Advanced training in computational linguistics, language processing, statistical modeling, and machine learning applied to textual data."
     },
     {
       date: 'Jan.–Jun. 2024',
@@ -228,7 +242,7 @@ const publications = [
     },
     venue: 'Preprint',
     year: '2026',
-    pdf: 'public/MudawanSn.pdf',
+    pdf: 'https://arxiv.org/pdf/2609.17539v1',
     githubUrl: 'https://github.com/M-mbaye30/MudawanSn',
     datasetUrl: 'https://huggingface.co/datasets/mbaye930/wolof-arabic-parallel-corpus',
     abstract: {
@@ -313,14 +327,37 @@ const datasets = [
 const education = {
   fr: [
     { year: '2025', degree: 'Master 2 Traitement Automatique des Langues (TAL)', institution: "Université Marie et Louis Pasteur, Besançon, France" },
-    { year: '2024', degree: 'Master 2 Data Science-NLP', institution: "Université Mohammed V, Rabat, Maroc" },
+    { year: '2024', degree: 'Master 2 Computational linguistics', institution: "Université Mohammed V, Rabat, Maroc" },
     { year: '2022', degree: "Licence de Linguistique", institution: "Université Cady Ayaad de Marrakech, Maroc" },
   ],
   en: [
     { year: '2025', degree: 'Master 2 in Natural Language Processing (NLP)', institution: "Marie and Louis Pasteur University, Besançon, France" },
-    { year: '2024', degree: 'Master 2 in Data Science & NLP', institution: "Mohammed V University, Rabat, Morocco" },
+    { year: '2024', degree: 'Master 2 Computational linguistics', institution: "Mohammed V University, Rabat, Morocco" },
     { year: '2022', degree: "Bachelor's in Linguistics", institution: "Cady Ayaad University, Marrakech, Morocco" },
   ],
+}
+
+const communicationsData = {
+  fr: [
+    {
+      date: '9-10 Nov. 2026',
+      title: 'Colloque ColDoc 2026 — Université Paris Nanterre',
+      type: 'Poster (Accepté)',
+      venue: 'Université Paris Nanterre',
+      summary: 'Présentation par poster acceptée pour le colloque ColDoc 2026.',
+      url: 'https://coldoc2026.sciencesconf.org/'
+    }
+  ],
+  en: [
+    {
+      date: 'Nov. 9-10, 2026',
+      title: 'ColDoc 2026 Symposium — Université Paris Nanterre',
+      type: 'Poster (Accepted)',
+      venue: 'Université Paris Nanterre',
+      summary: 'Poster presentation accepted for the ColDoc 2026 symposium.',
+      url: 'https://coldoc2026.sciencesconf.org/'
+    }
+  ]
 }
 
 const certifications = {
@@ -401,6 +438,7 @@ const navPages = [
   { id: 'publications', file: 'publications.html' },
   { id: 'logiciels', file: 'logiciels.html' },
   { id: 'formation', file: 'formation.html' },
+  { id: 'communications', file: 'communications.html' },
   { id: 'actualites', file: 'actualites.html' },
 ]
 
@@ -733,6 +771,37 @@ function renderFormation(lang) {
   `
 }
 
+function renderCommunications(lang) {
+  const el = document.getElementById('page-body')
+  if (!el) return
+  const siteLabel = lang === 'fr' ? 'Site du colloque ↗' : 'Symposium website ↗'
+  const isFr = lang === 'fr'
+  el.innerHTML = `
+    <h2 class="page-title">${isFr ? 'Communications & Colloques' : 'Communications & Symposia'}</h2>
+    <p class="page-intro">${isFr
+      ? "Posters, communications et présentations lors de colloques et événements scientifiques."
+      : 'Poster presentations and communications at academic symposia and events.'
+    }</p>
+    <div class="communications-list">
+      ${communicationsData[lang].map(item => `
+        <div class="content-entry">
+          <div class="entry-header">
+            <h4>${item.title}</h4>
+            <span class="entry-type">${item.type}</span>
+          </div>
+          <p class="pub-citation" style="margin-bottom: 0.4rem;">
+            <strong>${item.venue}</strong> · <span style="color: var(--primary-color); font-weight: 600;">${item.date}</span>
+          </p>
+          <p class="news-list-details" style="margin-bottom: 0.65rem;">${item.summary}</p>
+          <div class="entry-links">
+            ${item.url ? `<a href="${item.url}" target="_blank" rel="noopener noreferrer" class="btn-link btn-outline">${siteLabel}</a>` : ''}
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `
+}
+
 /* ── News (sidebar cards) ── */
 function renderNews(lang) {
   const el = document.getElementById('news-cards')
@@ -903,6 +972,7 @@ const pageRenderers = {
   publications: renderPublications,
   logiciels: renderLogiciels,
   formation: renderFormation,
+  communications: renderCommunications,
 }
 
 function initPage(pageId) {

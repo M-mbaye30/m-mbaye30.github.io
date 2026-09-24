@@ -8,6 +8,14 @@
     <atom:link xmlns:atom="http://www.w3.org/2005/Atom" href="https://m-mbaye30.github.io/rss.xml" rel="self" type="application/rss+xml"/>
 
     <item>
+      <title>Acceptation de communication au colloque ColDoc 2026 (Université Paris Nanterre)</title>
+      <link>https://m-mbaye30.github.io/communications.html</link>
+      <guid isPermaLink="false">coldoc2026-accepted-2026-09</guid>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 GMT</pubDate>
+      <description>Notre proposition de poster a été acceptée pour le colloque ColDoc 2026, qui se tiendra les 9 et 10 novembre 2026 à l'Université Paris Nanterre.</description>
+    </item>
+
+    <item>
       <title>Intégration de GalsenAI Lab en tant que chercheur et membre actif sur le pôle TAL</title>
       <link>https://m-mbaye30.github.io/actualites.html</link>
       <guid isPermaLink="false">galsenai-integration-2026-07</guid>

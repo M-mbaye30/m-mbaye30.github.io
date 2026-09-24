@@ -13,7 +13,7 @@ const BIN = path.join(ROOT, 'node_modules', '.bin')
 
 const HTML_FILES = [
   'index.html', 'rechercheareas.html', 'publications.html',
-  'logiciels.html', 'formation.html', 'actualites.html',
+  'communications.html', 'logiciels.html', 'formation.html', 'actualites.html',
 ]
 const COPY_ITEMS = ['public', 'robots.txt', 'sitemap.xml', 'rss.xml']
 
