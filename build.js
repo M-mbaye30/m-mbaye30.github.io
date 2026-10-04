@@ -11,11 +11,8 @@ const ROOT = __dirname
 const DIST = path.join(ROOT, 'dist')
 const BIN = path.join(ROOT, 'node_modules', '.bin')
 
-const HTML_FILES = [
-  'index.html', 'rechercheareas.html', 'publications.html',
-  'communications.html', 'logiciels.html', 'formation.html', 'actualites.html',
-]
-const COPY_ITEMS = ['public', 'robots.txt', 'sitemap.xml', 'rss.xml']
+const HTML_FILES = ['index.html']
+const COPY_ITEMS = ['public', 'robots.txt', 'sitemap.xml']
 
 function clean(dir) {
   fs.rmSync(dir, { recursive: true, force: true })

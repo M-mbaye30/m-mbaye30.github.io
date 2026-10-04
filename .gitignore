@@ -1,2 +1,14 @@
 node_modules/
 dist/
+
+# Local editor and machine settings
+.claude/settings.local.json
+.DS_Store
+Thumbs.db
+
+# Local environment and log files
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.log
