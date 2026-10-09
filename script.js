@@ -1,6 +1,6 @@
 const cvUrl = {
-  fr: 'public/cf_français.pdf',
-  en: 'public/cv_anglais.pdf',
+  fr: 'public/CvDeMouhamed.pdf',
+  en: 'public/MouhamedResum.pdf',
 }
 const currentLangKey = 'lang'
 const currentThemeKey = 'theme'
@@ -115,14 +115,83 @@ const communications = {
 
 const education = {
   fr: [
+    { year: '2026 – 2027', degree: 'Master 2 Sciences du langage – parcours ADiReO (en cours)', institution: 'Université Paul-Valéry Montpellier 3, France' },
     { year: '2025', degree: 'Master 2 Traitement Automatique des Langues (TAL)', institution: 'Université Marie et Louis Pasteur, Besançon, France' },
     { year: '2024', degree: 'Master 2 Computational linguistics', institution: 'Université Mohammed V, Rabat, Maroc' },
-    { year: '2022', degree: 'Licence de Linguistique', institution: 'Université Cady Ayaad de Marrakech, Maroc' },
+    { year: '2022', degree: 'Licence de Linguistique', institution: 'Université Cady Ayyad de Marrakech, Maroc' },
   ],
   en: [
+    { year: '2026 – 2027', degree: 'Master 2 Language Sciences – ADiReO track (in progress)', institution: 'Paul-Valéry University Montpellier 3, France' },
     { year: '2025', degree: 'Master 2 in Natural Language Processing (NLP)', institution: 'Marie and Louis Pasteur University, Besançon, France' },
-    { year: '2024', degree: 'Master 2 Computational linguistics', institution: 'Mohammed V University, Rabat, Morocco' },
-    { year: '2022', degree: "Bachelor's in Linguistics", institution: 'Cady Ayaad University, Marrakech, Morocco' },
+    { year: '2024', degree: 'Master 2 Computational Linguistics', institution: 'Mohammed V University, Rabat, Morocco' },
+    { year: '2022', degree: "Bachelor's in Linguistics", institution: 'Cady Ayyad University, Marrakech, Morocco' },
+  ],
+}
+
+const certifications = {
+  fr: [
+    {
+      year: '2025',
+      title: 'Retrieval Augmented Generation (RAG)',
+      issuer: 'DeepLearning.AI',
+      details: "Conception, implémentation et déploiement de systèmes RAG complets et fiables, adaptés aux domaines d'application spécifiques.",
+    },
+    {
+      year: '2025',
+      title: 'Text Mining for Marketing',
+      issuer: 'O.P. Jindal Global University',
+      details: "Acquisition des bases du Text Mining et identification des meilleures pratiques en analyse textuelle pour la prise de décision.",
+    },
+    {
+      year: '2024',
+      title: 'Natural Language Processing with Probabilistic Models',
+      issuer: 'DeepLearning.AI',
+      details: "Maîtrise des modèles probabilistes, incluant les N-grammes, l'étiquetage de séquences et les algorithmes d'auto-complétion.",
+    },
+    {
+      year: '2024',
+      title: 'Natural Language Processing with Classification and Vector Spaces',
+      issuer: 'DeepLearning.AI',
+      details: 'Techniques fondamentales du TAL : analyse de sentiment, espaces vectoriels et plongements de mots (word embeddings).',
+    },
+    {
+      year: '2024',
+      title: 'Elements of AI',
+      issuer: 'University of Helsinki & MinnaLearn',
+      details: "Compréhension fondamentale des concepts de l'IA : machine learning, réseaux de neurones et implications sociétales.",
+    },
+  ],
+  en: [
+    {
+      year: '2025',
+      title: 'Retrieval Augmented Generation (RAG)',
+      issuer: 'DeepLearning.AI',
+      details: 'Design, implementation, and deployment of complete and reliable RAG systems, tailored to specific application domains.',
+    },
+    {
+      year: '2025',
+      title: 'Text Mining for Marketing',
+      issuer: 'O.P. Jindal Global University',
+      details: 'Acquisition of the fundamentals of Text Mining and identification of best practices in textual analysis for decision-making.',
+    },
+    {
+      year: '2024',
+      title: 'Natural Language Processing with Probabilistic Models',
+      issuer: 'DeepLearning.AI',
+      details: 'Mastery of probabilistic models, including N-grams, sequence labeling, and autocomplete algorithms.',
+    },
+    {
+      year: '2024',
+      title: 'Natural Language Processing with Classification and Vector Spaces',
+      issuer: 'DeepLearning.AI',
+      details: 'Fundamental NLP techniques: sentiment analysis, vector spaces, and word embeddings.',
+    },
+    {
+      year: '2024',
+      title: 'Elements of AI',
+      issuer: 'University of Helsinki & MinnaLearn',
+      details: 'Fundamental understanding of AI concepts: machine learning, neural networks, and societal implications.',
+    },
   ],
 }
 
@@ -233,9 +302,14 @@ function renderHome(lang) {
     </section>
 
     <section class="home-section" id="background">
-      <div class="home-section-heading"><h2>${isFr ? 'Formation' : 'Education'}</h2></div>
+      <div class="home-section-heading"><h2>${isFr ? 'Formation & Certifications' : 'Education & Certifications'}</h2></div>
+      <h3 class="home-subheading">${isFr ? 'Parcours Académique' : 'Academic Path'}</h3>
       <ul class="home-education-list">
         ${education[lang].map(item => `<li><span class="home-publication-year">${item.year}</span><div><h3>${item.degree}</h3><p>${item.institution}</p></div></li>`).join('')}
+      </ul>
+      <h3 class="home-subheading" style="margin-top: 1.75rem;">Certifications</h3>
+      <ul class="home-education-list">
+        ${certifications[lang].map(item => `<li><span class="home-publication-year">${item.year}</span><div><h3>${item.title}</h3><p><strong>${item.issuer}</strong> — ${item.details}</p></div></li>`).join('')}
       </ul>
     </section>
   `
