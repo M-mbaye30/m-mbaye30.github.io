@@ -94,7 +94,7 @@ const datasets = [
 
 const communications = {
   fr: {
-    title: 'Colloque ColDoc 2026 — Université Paris Nanterre',
+    title: 'Colloque ColDoc 2026 (Université Paris Nanterre)',
     date: '9-10 Nov. 2026',
     type: 'Poster (Accepté)',
     venue: 'Université Paris Nanterre',
@@ -103,7 +103,7 @@ const communications = {
     websiteLabel: 'Site du colloque',
   },
   en: {
-    title: 'ColDoc 2026 Symposium — Université Paris Nanterre',
+    title: 'ColDoc 2026 Symposium (Université Paris Nanterre)',
     date: 'Nov. 9-10, 2026',
     type: 'Poster (Accepted)',
     venue: 'Université Paris Nanterre',
@@ -319,7 +319,7 @@ function renderHome(lang) {
       </ul>
       <h3 class="home-subheading" style="margin-top: 1.75rem;">Certifications</h3>
       <ul class="home-education-list">
-        ${certifications[lang].map(item => `<li><span class="home-publication-year">${item.year}</span><div><h3>${item.title}</h3><p><strong>${item.issuer}</strong> — ${item.details}${item.url ? ` <a class="home-cv-link" href="${item.url}" target="_blank" rel="noopener noreferrer" style="margin-left: 0.5rem; padding: 0.15rem 0.45rem; font-size: 0.78rem;">${isFr ? 'Voir le certificat' : 'View certificate'}</a>` : ''}</p></div></li>`).join('')}
+        ${certifications[lang].map(item => `<li><span class="home-publication-year">${item.year}</span><div><h3>${item.title}</h3><p style="margin-bottom: 0.25rem;"><strong>${item.issuer}</strong>${item.url ? ` <a class="home-cv-link" href="${item.url}" target="_blank" rel="noopener noreferrer" style="margin-left: 0.5rem; padding: 0.15rem 0.45rem; font-size: 0.78rem;">${isFr ? 'Voir le certificat' : 'View certificate'}</a>` : ''}</p><p>${item.details}</p></div></li>`).join('')}
       </ul>
     </section>
   `
