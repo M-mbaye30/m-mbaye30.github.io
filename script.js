@@ -115,13 +115,11 @@ const communications = {
 
 const education = {
   fr: [
-    { year: '2026 – 2027', degree: 'Master 2 Sciences du langage – parcours ADiReO (en cours)', institution: 'Université Paul-Valéry Montpellier 3, France' },
     { year: '2025', degree: 'Master 2 Traitement Automatique des Langues (TAL)', institution: 'Université Marie et Louis Pasteur, Besançon, France' },
     { year: '2024', degree: 'Master 2 Computational linguistics', institution: 'Université Mohammed V, Rabat, Maroc' },
     { year: '2022', degree: 'Licence de Linguistique', institution: 'Université Cady Ayyad de Marrakech, Maroc' },
   ],
   en: [
-    { year: '2026 – 2027', degree: 'Master 2 Language Sciences – ADiReO track (in progress)', institution: 'Paul-Valéry University Montpellier 3, France' },
     { year: '2025', degree: 'Master 2 in Natural Language Processing (NLP)', institution: 'Marie and Louis Pasteur University, Besançon, France' },
     { year: '2024', degree: 'Master 2 Computational Linguistics', institution: 'Mohammed V University, Rabat, Morocco' },
     { year: '2022', degree: "Bachelor's in Linguistics", institution: 'Cady Ayyad University, Marrakech, Morocco' },
